@@ -13,9 +13,9 @@ console.log(John.name);   // undefined
 console.log(John.get()) ;   // John
 burda user obyekti name parametri alir.burada closure ye gore qiraqdan mudaxile mumkun olmur.buna gore de User obyektine bagli get funksiyasi isledilir.get funksiyasinin da ozelliyi oz ehatesinden fdaha yuksek ehateye cata bilmesidir.belelikle saxladigimiz melumati oz funksiyalarimizla qiraga da ceke bilirik.
 
-3)typeof-la yoxlamaq olar.typeof deyisen=”object” ya null yada obyekt qaytarir.
+3)typeof-la yoxlamaq olar.typeof deyisen=â€objectâ€ ya null yada obyekt qaytarir.
 
-4) ?g?r JS-d? lokal d?yiş?n elan etm?k ist?yiriks?, d?yiş?nin ?vv?lind? var sözünd?n istifad? olunur. Qlobal d?yiş?nin elanında var sözünd?n istifad? olunmur. M?n qlobal d?yiş?n elan etdikd? h?min d?yiş?nd?n ist?nil?n funksiyada v? s. istifad? ed? bil?r?m. M?s?l?n,
+4) ?g?r JS-d? lokal d?yiÅŸ?n elan etm?k ist?yiriks?, d?yiÅŸ?nin ?vv?lind? var sÃ¶zÃ¼nd?n istifad? olunur. Qlobal d?yiÅŸ?nin elanÄ±nda var sÃ¶zÃ¼nd?n istifad? olunmur. M?n qlobal d?yiÅŸ?n elan etdikd? h?min d?yiÅŸ?nd?n ist?nil?n funksiyada v? s. istifad? ed? bil?r?m. M?s?l?n,
 a = 5;
 function example() {
 a = 10;
@@ -23,16 +23,21 @@ a = 10;
 console.log(a);
 example();
 console.log(a);
-bu nümun?d? ilk ?vv?l a=5 elan olunub daha sonra funksiyada is? funksiyada a=10 elan olunub ilk console.log funksiya çağırılmamışdan ?vv?l yazıldığından heç bir d?yişiklik olmur. Funksiya çağırıldıqdan sora d?yiş?n öz qiym?tini d?yişir v? 10 olur. Ancaq funksiyanın iç?risind? var a=10 ets? idik artıq bu a d?yiş?ni funksiyanın lokal d?yiş?ni olacaqdı v? ancaq ona funksiya daxilind? müraci?t etm?k mümkün olacaqdı v? ?vv?lki nümun?d? funkisyanı çağırdıqdan sora bel? a=5 cavabı qaytarılacaq.
+bu nÃ¼mun?d? ilk ?vv?l a=5 elan olunub daha sonra funksiyada is? funksiyada a=10 elan olunub ilk console.log funksiya Ã§aÄŸÄ±rÄ±lmamÄ±ÅŸdan ?vv?l yazÄ±ldÄ±ÄŸÄ±ndan heÃ§ bir d?yiÅŸiklik olmur. Funksiya Ã§aÄŸÄ±rÄ±ldÄ±qdan sora d?yiÅŸ?n Ã¶z qiym?tini d?yiÅŸir v? 10 olur. Ancaq funksiyanÄ±n iÃ§?risind? var a=10 ets? idik artÄ±q bu a d?yiÅŸ?ni funksiyanÄ±n lokal d?yiÅŸ?ni olacaqdÄ± v? ancaq ona funksiya daxilind? mÃ¼raci?t etm?k mÃ¼mkÃ¼n olacaqdÄ± v? ?vv?lki nÃ¼mun?d? funkisyanÄ± Ã§aÄŸÄ±rdÄ±qdan sora bel? a=5 cavabÄ± qaytarÄ±lacaq.
 
 5)== bu isere yeni iki beraber qarsilasdirilanlarin beraber olu olmadigini yoxluyur,uc beraber ise === qarsilasdiricilarin hem beraber olub olmadigini ,hemde tipini yoxlayir.bu ikisinden ise eger tiplerin eyni olduguna eminsinizse === uc bearber istifade etmek daha meslehetlidir.
 
 
 6)meselen,boolen,string,symbol,object,nmber,null.  Haqqinda desek boolen mentiksel tipdi,iki deyeroi var.trueve false,string ise setir tipidir.symbol javascript ucun yeni bir tipdir.symbollere bezi dillerde atom deyilir.
 
-	7) What would “1”+2+3 and 1+2+“3” evaluate to, respectively?
- “1”+2+3 ve 1+2+“3” bunlar arasindaki ferq odur ki, birinci de birinci yerde string gelir ve onnan sora gelenleri string olaraq gorur yeni ele qebul edir ona gorede “1”+2+3 bu ifadede cavab “123” olacaq.ikincide ise stringe qeder oz isini gorur yeni  1+2+“3” bu ifade 1 le 2 ni toplayir  3 u alir sonra 3+”3”=”33” alir.
+	7) What would â€œ1â€+2+3 and 1+2+â€œ3â€ evaluate to, respectively?
+ â€œ1â€+2+3 ve 1+2+â€œ3â€ bunlar arasindaki ferq odur ki, birinci de birinci yerde string gelir ve onnan sora gelenleri string olaraq gorur yeni ele qebul edir ona gorede â€œ1â€+2+3 bu ifadede cavab â€œ123â€ olacaq.ikincide ise stringe qeder oz isini gorur yeni  1+2+â€œ3â€ bu ifade 1 le 2 ni toplayir  3 u alir sonra 3+â€3â€=â€33â€ alir.
 
+    8)8. Explain the concept of unobtrusive Javascript?
+Unobtrusive JavaScript - Javascriptde web-proqramlashdirmaya yanashmadi. Bu yanashmanin esas konsepsiyalari ashagidakilardir: 
+1) Web sehifenin strukturunun (HTML), bezeyinin (CSS) ve interaktivliyinin (Javascript) ayri-ayri bolunmesi;
+2) Artiq hazir olan web appin istifadesini asanlashdirmaq ucun Javascriptden istifade;
+3) Graceful degradation texnikasinin olmasi: biz wep appimize Javascriptle mueyyen funskiyalari elave edirik, lakin bezi brauzerler hemin funksiyalari desteklemeye biler. Bu texnika onuncun istifade olunur ki, brauzer funksiyalari desteklemese de web appin ishlemesine engel toretmesin.
 
 	9) What is the difference between a null value and an undefined value?
 Undefined ve null deyisenin bos oldugunu gosterir .rasindaki ferq ise null bos degerdir.
