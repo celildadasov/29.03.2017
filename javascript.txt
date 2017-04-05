@@ -1,0 +1,99 @@
+2)closure javascriptde bir nov data gizliliyi ucundur.meselen missal verek
+var User = (name) => {
+    
+    return {
+        get: () => name,
+        getFullname: (surname) => name + surname
+    };
+
+};
+
+var john = User("John");
+console.log(John.name);   // undefined
+console.log(John.get()) ;   // John
+burda user obyekti name parametri alir.burada closure ye gore qiraqdan mudaxile mumkun olmur.buna gore de User obyektine bagli get funksiyasi isledilir.get funksiyasinin da ozelliyi oz ehatesinden fdaha yuksek ehateye cata bilmesidir.belelikle saxladigimiz melumati oz funksiyalarimizla qiraga da ceke bilirik.
+
+3)typeof-la yoxlamaq olar.typeof deyisen=”object” ya null yada obyekt qaytarir.
+
+4) ?g?r JS-d? lokal d?yiþ?n elan etm?k ist?yiriks?, d?yiþ?nin ?vv?lind? var sözünd?n istifad? olunur. Qlobal d?yiþ?nin elanýnda var sözünd?n istifad? olunmur. M?n qlobal d?yiþ?n elan etdikd? h?min d?yiþ?nd?n ist?nil?n funksiyada v? s. istifad? ed? bil?r?m. M?s?l?n,
+a = 5;
+function example() {
+a = 10;
+}
+console.log(a);
+example();
+console.log(a);
+bu nümun?d? ilk ?vv?l a=5 elan olunub daha sonra funksiyada is? funksiyada a=10 elan olunub ilk console.log funksiya çaðýrýlmamýþdan ?vv?l yazýldýðýndan heç bir d?yiþiklik olmur. Funksiya çaðýrýldýqdan sora d?yiþ?n öz qiym?tini d?yiþir v? 10 olur. Ancaq funksiyanýn iç?risind? var a=10 ets? idik artýq bu a d?yiþ?ni funksiyanýn lokal d?yiþ?ni olacaqdý v? ancaq ona funksiya daxilind? müraci?t etm?k mümkün olacaqdý v? ?vv?lki nümun?d? funkisyaný çaðýrdýqdan sora bel? a=5 cavabý qaytarýlacaq.
+
+5)== bu isere yeni iki beraber qarsilasdirilanlarin beraber olu olmadigini yoxluyur,uc beraber ise === qarsilasdiricilarin hem beraber olub olmadigini ,hemde tipini yoxlayir.bu ikisinden ise eger tiplerin eyni olduguna eminsinizse === uc bearber istifade etmek daha meslehetlidir.
+
+
+6)meselen,boolen,string,symbol,object,nmber,null.  Haqqinda desek boolen mentiksel tipdi,iki deyeroi var.trueve false,string ise setir tipidir.symbol javascript ucun yeni bir tipdir.symbollere bezi dillerde atom deyilir.
+
+	7) What would “1”+2+3 and 1+2+“3” evaluate to, respectively?
+ “1”+2+3 ve 1+2+“3” bunlar arasindaki ferq odur ki, birinci de birinci yerde string gelir ve onnan sora gelenleri string olaraq gorur yeni ele qebul edir ona gorede “1”+2+3 bu ifadede cavab “123” olacaq.ikincide ise stringe qeder oz isini gorur yeni  1+2+“3” bu ifade 1 le 2 ni toplayir  3 u alir sonra 3+”3”=”33” alir.
+
+
+	9) What is the difference between a null value and an undefined value?
+Undefined ve null deyisenin bos oldugunu gosterir .rasindaki ferq ise null bos degerdir.
+<script>
+	var testDegiskeni = null;
+	alert(testDegiskeni);	alert(typeof testDegiskeni); 
+</script>
+
+
+Undefined ise deyisken bildirilib ancaq deyeri verilmeyendir. Meselen:
+<script>
+	var testDegiskeni;
+	alert(testDegiskeni); 
+	alert(typeof testDegiskeni); 
+
+
+10) Which conditional statements will JavaScript support?
+1.if
+2.else
+3.if else
+4.switch
+
+11)NaN JAVASCRIPTDE metoddur.alinan deyerin reqem olub -olmadigini yoxluyur .
+Eger reqem deyilse (not a number) true cixardir .eks haldsa ise false cixardir.
+isNaN(0) //false
+isNaN('123') //false
+isNaN('Hello') //true.
+
+
+12)  this funksiyaya icinddekilere ,obyekte,arraye  muraciet etmek ucun isledilir.
+(function() {
+
+  function f3() {  
+    return this;
+  }
+  f3.call(this) === window; 
+
+  function f4() {
+    this.herp = 'derp';
+  }
+  
+  function Thing() {
+    this.thisIsEasyToUnderstand = 'just kidding';
+    f4.call(this);
+  }
+  var thing = new Thing(); 
+ 
+
+})();
+
+13)undefined tipdir.deyisen var ama deyeri verilmiyib.notdefined ise desyisen teyin olunmuyub istifade olunanda ise error verir
+
+
+15)object oriented programming ve functional programing
+
+16)functional programming  funksiyalardan teskil olunmusdur.kod tekrarinin qarsisini alir ve eyni kodun ferqli sertler altinda islimesini heyata kecirie bilir.burada kodun oxunabilirliyi daha yaxwidir ve kod daha asan analiz edilir
+
+18) functional programming  musbet terefi kod tekrarinin qarsisini alir.
+
+24)asynchronous programming basa dusduyum qederile odur ki ,
+meselen kod yaziriq aniden hec bir sebeb olmadan proqram donur.bir muddety sonra ise hecne olmamis kimi proses davam edir.
+bunun sebebi ise eyno zamanda kodda bir nrce proses gedir .biri bitmemis o biri bas vere bilmediyinden  asynchronous programming-den istifade edilir.
+ 
+bezi suallari tam tutmadim deye yazmadim.
